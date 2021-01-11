@@ -1,0 +1,94 @@
+.header {
+  padding: 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $crimson;
+    font-weight: 200;
+    font-size: 14px;
+    border: 1px solid $white;
+    padding: 0.3rem 0.8rem;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    z-index: 10;
+    @include md {
+      display: flex;
+      position: relative;
+      min-height: max-content;
+    }
+    .list {
+      padding: 0;
+      min-height: inherit;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include md {
+        flex-direction: row;
+        width: 500px;
+        min-width: fit-content;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      &__item {
+        margin-bottom: 2rem;
+        @include md {
+          margin: 0;
+        }
+      }
+      &__link {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 500;
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    &__input {
+      opacity: 0;
+      width: 30px;
+      height: 30px;
+      z-index: 15;
+      right: 10px;
+      @include md {
+        display: none;
+      }
+      &:checked ~ .main-nav {
+        display: block;
+      }
+      &:checked ~ .topbar__icon--hamburger {
+        display: none;
+      }
+      &:not(:checked) ~ .topbar__icon--close {
+        display: none;
+      }
+    }
+    &__icon {
+      position: absolute;
+      z-index: 12;
+      width: 30px;
+      height: 30px;
+      right: 10px;
+      @include md {
+        display: none;
+      }
+    }
+  }
+}
