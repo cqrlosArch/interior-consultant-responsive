@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/7XSInzf2loIoaIZKrv1k">
       Solution
     </a>
     <span> | </span>
@@ -45,9 +45,9 @@
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [Pug](https://pugjs.org/api/getting-started.html)
+- [Sass](https://sass-lang.com/)
+- [Gulp](https://gulpjs.com/)
 
 ## Features
 
